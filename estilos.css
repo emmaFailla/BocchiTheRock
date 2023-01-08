@@ -1,0 +1,744 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+@font-face {
+  font-family: "Bocchi";
+  src: url(Font/thugolatz.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#main .engine {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+#main .engine .gear {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+#main .cover__container {
+  min-height: 60vh;
+  min-width: 30vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(Covers/1.jpg);
+  background-position: center center;
+  background-size: cover;
+  -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+}
+
+#main .cover__container .albumOff {
+  display: none;
+}
+
+#main .cover__container .albumOn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .cover__container .albumPlaylist__container {
+  height: 40vh;
+  width: 15vw;
+  border: solid #000 4px;
+  right: -20vw;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .cover__container .albumPlaylist__container .albumPlaylist {
+  height: 95%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+#main .cover__container .albumPlaylist__container .albumPlaylist .song {
+  list-style: none;
+  border-bottom: solid #000 4px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#main .cover__container .songName {
+  position: absolute;
+  bottom: -5vh;
+  color: rgba(0, 0, 0, 0.814);
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+#main .cover__container .songShadow {
+  position: absolute;
+  bottom: -5.2vh;
+  margin-left: .5vh;
+  color: pink;
+  font-size: 1.2rem;
+}
+
+#main .cover__container .options__container {
+  position: absolute;
+  height: 10vh;
+  width: 50vw;
+  bottom: -17vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .cover__container .options__container .chargingBar {
+  position: absolute;
+  height: 2vh;
+  width: 30vw;
+  top: -1vh;
+  background-color: rgba(0, 0, 0, 0.814);
+}
+
+#main .cover__container .options__container .chargingBar .bar {
+  height: 100%;
+  background-color: #f3f3f3;
+  position: absolute;
+  width: 0%;
+  left: 0%;
+}
+
+#main .cover__container .options__container .buttons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+#main .cover__container .options__container .buttons__container .previousSong {
+  margin: 0 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.814);
+}
+
+#main .cover__container .options__container .buttons__container .previousSong:hover {
+  color: #000;
+}
+
+#main .cover__container .options__container .buttons__container .nextSong {
+  margin: 0 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.814);
+}
+
+#main .cover__container .options__container .buttons__container .nextSong:hover {
+  color: #000;
+}
+
+#main .cover__container .options__container .buttons__container .play {
+  margin: 0 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.814);
+}
+
+#main .cover__container .options__container .buttons__container .play:hover {
+  color: #000;
+}
+
+#main .cover__container .options__container .buttons__container .pause {
+  margin: 0 5px;
+  font-size: 2.4rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.814);
+}
+
+#main .cover__container .options__container .buttons__container .pause:hover {
+  color: #000;
+}
+
+#main .cover__container .options__container .buttons__container .off {
+  display: none;
+}
+
+#main .cover__container .options__container .buttons__container .on {
+  display: block;
+}
+
+@-webkit-keyframes carga {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes carga {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.guitarLonelinessCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 229s;
+          animation-duration: 229s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.distortionCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.constellationCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 259s;
+          animation-duration: 259s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.neverForgetCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 224s;
+          animation-duration: 224s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.rockNRollCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 272s;
+          animation-duration: 272s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.karakaraCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 265s;
+          animation-duration: 265s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.thatBandCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 213s;
+          animation-duration: 213s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.whatsWrongCharge {
+  -webkit-animation-name: carga;
+          animation-name: carga;
+  -webkit-animation-duration: 227s;
+          animation-duration: 227s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.pausedAnimation {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@media only screen and (max-width: 600px) {
+  #main .engine {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+  }
+  #main .cover__container {
+    min-height: 40vh;
+    min-width: 50vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url(Covers/1.jpg);
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+  }
+  #main .cover__container .albumPlaylist__container {
+    display: none;
+    height: 40vh;
+    width: 15vw;
+    border: solid #000 4px;
+    right: -20vw;
+    position: absolute;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main .cover__container .albumPlaylist__container .albumPlaylist {
+    height: 95%;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main .cover__container .albumPlaylist__container .albumPlaylist .song {
+    list-style: none;
+    border-bottom: solid #000 4px;
+    width: 100%;
+    cursor: pointer;
+  }
+  #main .cover__container .songName {
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+  #main .cover__container .options__container {
+    position: absolute;
+    height: 10vh;
+    width: 50vw;
+    bottom: -17vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main .cover__container .options__container .chargingBar {
+    position: absolute;
+    height: 2vh;
+    width: 50vw;
+    top: -1vh;
+    background-color: rgba(0, 0, 0, 0.814);
+  }
+  #main .cover__container .options__container .chargingBar .bar {
+    height: 100%;
+    background-color: #f3f3f3;
+    position: absolute;
+    width: 0%;
+    left: 0%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  #main .engine {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+  }
+  #main .cover__container {
+    min-height: 50vh;
+    min-width: 50vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url(Covers/1.jpg);
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+  }
+  #main .cover__container .albumPlaylist__container {
+    display: none;
+    height: 40vh;
+    width: 15vw;
+    border: solid #000 4px;
+    right: -20vw;
+    position: absolute;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main .cover__container .albumPlaylist__container .albumPlaylist {
+    height: 95%;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main .cover__container .albumPlaylist__container .albumPlaylist .song {
+    list-style: none;
+    border-bottom: solid #000 4px;
+    width: 100%;
+    cursor: pointer;
+  }
+  #main .cover__container .songName {
+    white-space: nowrap;
+  }
+  #main .cover__container .options__container {
+    position: absolute;
+    height: 10vh;
+    width: 50vw;
+    bottom: -17vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main .cover__container .options__container .chargingBar {
+    position: absolute;
+    height: 2vh;
+    width: 50vw;
+    top: -1vh;
+    background-color: rgba(0, 0, 0, 0.814);
+  }
+  #main .cover__container .options__container .chargingBar .bar {
+    height: 100%;
+    background-color: #f3f3f3;
+    position: absolute;
+    width: 0%;
+    left: 0%;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #main {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  #main .engine {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: block;
+  }
+  #main .engine .gear {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  #main .cover__container {
+    min-height: 50vh;
+    min-width: 40vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url(Covers/1.jpg);
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+  }
+  #main .cover__container .albumOff {
+    display: none;
+  }
+  #main .cover__container .albumOn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #main .cover__container .albumPlaylist__container {
+    height: 40vh;
+    width: 20vw;
+    border: solid #000 4px;
+    right: -22vw;
+    position: absolute;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main .cover__container .albumPlaylist__container .albumPlaylist {
+    height: 95%;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: scroll;
+  }
+  #main .cover__container .albumPlaylist__container .albumPlaylist .song {
+    list-style: none;
+    border-bottom: solid #000 4px;
+    width: 100%;
+    cursor: pointer;
+  }
+  #main .cover__container .songName {
+    position: absolute;
+    bottom: -5vh;
+    color: rgba(0, 0, 0, 0.814);
+    font-size: 1.2rem;
+    z-index: 2;
+    white-space: nowrap;
+  }
+  #main .cover__container .songShadow {
+    position: absolute;
+    bottom: -5.2vh;
+    margin-left: .5vh;
+    color: pink;
+    font-size: 1.2rem;
+  }
+  #main .cover__container .options__container {
+    position: absolute;
+    height: 10vh;
+    width: 50vw;
+    bottom: -17vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main .cover__container .options__container .chargingBar {
+    position: absolute;
+    height: 2vh;
+    width: 40vw;
+    top: -1vh;
+    background-color: rgba(0, 0, 0, 0.814);
+  }
+  #main .cover__container .options__container .chargingBar .bar {
+    height: 100%;
+    background-color: #f3f3f3;
+    position: absolute;
+    width: 0%;
+    left: 0%;
+  }
+  #main .cover__container .options__container .buttons__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  #main .cover__container .options__container .buttons__container .previousSong {
+    margin: 0 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.814);
+  }
+  #main .cover__container .options__container .buttons__container .previousSong:hover {
+    color: #000;
+  }
+  #main .cover__container .options__container .buttons__container .nextSong {
+    margin: 0 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.814);
+  }
+  #main .cover__container .options__container .buttons__container .nextSong:hover {
+    color: #000;
+  }
+  #main .cover__container .options__container .buttons__container .play {
+    margin: 0 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.814);
+  }
+  #main .cover__container .options__container .buttons__container .play:hover {
+    color: #000;
+  }
+  #main .cover__container .options__container .buttons__container .pause {
+    margin: 0 5px;
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.814);
+  }
+  #main .cover__container .options__container .buttons__container .pause:hover {
+    color: #000;
+  }
+  #main .cover__container .options__container .buttons__container .off {
+    display: none;
+  }
+  #main .cover__container .options__container .buttons__container .on {
+    display: block;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */

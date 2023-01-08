@@ -1,0 +1,666 @@
+@font-face {
+    font-family:"Bocchi";
+    src: url(Font/thugolatz.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family:"Poppins";
+    
+}
+
+#main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position: relative;
+
+    .engine{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+        .gear{
+            font-size:2.5rem;
+            cursor:pointer;
+        }
+        
+    }
+
+
+    .cover__container{
+        min-height: 60vh;
+        min-width: 30vw;
+        position:relative;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        background-image: url(Covers/1.jpg);
+        background-position: center center;
+        background-size: cover;
+        -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+        border-radius: 2px;
+
+       .albumOff{
+                display: none;
+            }
+        .albumOn{
+                display: flex;
+            }
+
+        .albumPlaylist__container{
+            height: 40vh;
+            width: 15vw;
+            border: solid #000 4px;
+            right: -20vw;
+            position: absolute;
+            align-items: center;
+            justify-content:center;
+
+            
+
+            .albumPlaylist{
+                height: 95%;
+                width: 90%;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-evenly;
+                align-items: center;
+            overflow: hidden;
+
+                .song{
+                    list-style: none;
+                    border-bottom:solid #000 4px;
+                    width: 100%;
+                    cursor: pointer;
+                }
+
+
+            }
+        }
+
+        .songName{
+            position: absolute;
+            bottom: -5vh;
+            color:rgba(0, 0, 0, 0.814);
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+
+        .songShadow{
+            position: absolute;
+            bottom: -5.2vh;
+            margin-left: .5vh;
+            color: pink;
+            font-size: 1.2rem;
+        }
+
+        .options__container{
+            position: absolute;
+            height: 10vh;
+            width: 50vw;
+        
+            bottom: -17vh;
+            display:flex;
+            justify-content: center;
+            
+
+            .chargingBar{
+                position: absolute;
+                height:2vh;
+                width: 30vw;
+                top: -1vh;
+                background-color:rgba(0, 0, 0, 0.814);
+
+                .bar{
+                    height: 100%;
+                    background-color:rgb(243, 243, 243);
+                    position: absolute;
+                    width: 0%;
+                    left: 0%;
+                }
+            }
+
+            .buttons__container{
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                height: 100%;
+                width: 100%;
+        
+                .previousSong{
+                    margin: 0 25px;
+                    font-size:1.5rem;
+                    cursor:pointer;
+                    color:rgba(0, 0, 0, 0.814);
+
+                    &:hover{
+                        color: #000;
+                    }
+                }
+                .nextSong{
+                    margin: 0 25px;
+                    font-size:1.5rem;
+                    cursor:pointer;
+                    color:rgba(0, 0, 0, 0.814);
+
+                    &:hover{
+                        color: #000;
+                    }
+                }
+                .play{
+                    margin: 0 5px;
+                    font-size: 2rem;
+                    cursor:pointer;
+                    color:rgba(0, 0, 0, 0.814);
+
+                    &:hover{
+                        color: #000;
+                    }
+                }
+
+                .pause{
+                    margin: 0 5px;
+                    font-size:2.4rem;
+                    cursor:pointer;
+                    color:rgba(0, 0, 0, 0.814);
+
+                    &:hover{
+                        color:#000;
+                    }
+                }
+
+                .off{
+                    display: none;
+                }
+
+                .on{
+                    display: block;
+                }
+                
+            }
+        }
+    }
+
+    
+}
+
+//Animacion de carga (La clase varia dependiendo la cancion).
+@keyframes carga {
+        from{
+            width: 0%;
+        }
+
+        to{
+            width: 100%;
+        }
+}
+
+//Clase para guitarLoneliness
+.guitarLonelinessCharge{
+    animation-name: carga;
+    animation-duration: 229s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.distortionCharge{
+    animation-name: carga;
+    animation-duration: 100s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.constellationCharge{
+    animation-name: carga;
+    animation-duration: 259s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.neverForgetCharge{
+    animation-name: carga;
+    animation-duration: 224s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.rockNRollCharge{
+    animation-name: carga;
+    animation-duration: 272s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.karakaraCharge{
+    animation-name: carga;
+    animation-duration: 265s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.thatBandCharge{
+    animation-name: carga;
+    animation-duration: 213s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.whatsWrongCharge{
+    animation-name: carga;
+    animation-duration: 227s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+} 
+
+
+.pausedAnimation{
+    animation-play-state: paused;
+}
+
+
+@media only screen and (max-width : 600px){
+    
+    #main{
+        
+    
+        .engine{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: none;
+        }
+    
+    
+        .cover__container{
+            min-height: 40vh;
+            min-width: 50vw;
+            position:relative;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background-image: url(Covers/1.jpg);
+            background-position: center center;
+            background-size: cover;
+            -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            border-radius: 2px;
+    
+
+            .albumPlaylist__container{
+                display: none;
+                height: 40vh;
+                width: 15vw;
+                border: solid #000 4px;
+                right: -20vw;
+                position: absolute;
+                align-items: center;
+                justify-content:center;
+    
+                
+    
+                .albumPlaylist{
+                    height: 95%;
+                    width: 90%;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+    
+                    .song{
+                        list-style: none;
+                        border-bottom:solid #000 4px;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+    
+    
+                }
+            }
+            .songName{
+                white-space: nowrap;
+                font-size:1rem;
+            }
+    
+            .options__container{
+                position: absolute;
+                height: 10vh;
+                width: 50vw;
+                bottom: -17vh;
+                display:flex;
+                justify-content: center;
+                
+    
+                .chargingBar{
+                    position: absolute;
+                    height:2vh;
+                    width: 50vw;
+                    top: -1vh;
+                    background-color:rgba(0, 0, 0, 0.814);
+    
+                    .bar{
+                        height: 100%;
+                        background-color:rgb(243, 243, 243);
+                        position: absolute;
+                        width: 0%;
+                        left: 0%;
+                    }
+                }
+    
+                
+            }
+        }
+    
+        
+    }
+
+}
+
+@media only screen and (min-width : 600px) and (max-width : 800px){
+    
+    #main{
+        
+        
+    
+        .engine{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: none;
+        }
+    
+    
+        .cover__container{
+            min-height: 50vh;
+            min-width: 50vw;
+            position:relative;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background-image: url(Covers/1.jpg);
+            background-position: center center;
+            background-size: cover;
+            -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            border-radius: 2px;
+    
+
+            .albumPlaylist__container{
+                display: none;
+                height: 40vh;
+                width: 15vw;
+                border: solid #000 4px;
+                right: -20vw;
+                position: absolute;
+                align-items: center;
+                justify-content:center;
+    
+                
+    
+                .albumPlaylist{
+                    height: 95%;
+                    width: 90%;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+    
+                    .song{
+                        list-style: none;
+                        border-bottom:solid #000 4px;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+    
+    
+                }
+            }
+            
+            .songName{
+                white-space: nowrap;
+            }
+            .options__container{
+                position: absolute;
+                height: 10vh;
+                width: 50vw;
+                bottom: -17vh;
+                display:flex;
+                justify-content: center;
+                
+    
+                .chargingBar{
+                    position: absolute;
+                    height:2vh;
+                    width: 50vw;
+                    top: -1vh;
+                    background-color:rgba(0, 0, 0, 0.814);
+    
+                    .bar{
+                        height: 100%;
+                        background-color:rgb(243, 243, 243);
+                        position: absolute;
+                        width: 0%;
+                        left: 0%;
+                    }
+                }
+    
+                
+            }
+        }
+    
+        
+    }
+
+}
+
+@media only screen and (min-width  : 800px) and (max-width : 1200px){
+    #main{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        position: relative;
+    
+        .engine{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: block;
+    
+            .gear{
+                font-size:2.5rem;
+                cursor:pointer;
+            }
+            
+        }
+    
+    
+        .cover__container{
+            min-height: 50vh;
+            min-width: 40vw;
+            position:relative;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background-image: url(Covers/1.jpg);
+            background-position: center center;
+            background-size: cover;
+            -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            border-radius: 2px;
+    
+           .albumOff{
+                    display: none;
+                }
+            .albumOn{
+                    display: flex;
+                }
+    
+            .albumPlaylist__container{
+                height: 40vh;
+                width: 20vw;
+                border: solid #000 4px;
+                right: -22vw;
+                position: absolute;
+                align-items: center;
+                justify-content:center;
+    
+                
+    
+                .albumPlaylist{
+                    height: 95%;
+                    width: 90%;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    overflow: scroll;
+    
+                    .song{
+                        list-style: none;
+                        border-bottom:solid #000 4px;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+    
+    
+                }
+            }
+    
+            .songName{
+                position: absolute;
+                bottom: -5vh;
+                color:rgba(0, 0, 0, 0.814);
+                font-size: 1.2rem;
+                z-index: 2;
+                white-space: nowrap;
+            }
+    
+            .songShadow{
+                position: absolute;
+                bottom: -5.2vh;
+                margin-left: .5vh;
+                color: pink;
+                font-size: 1.2rem;
+            }
+    
+            .options__container{
+                position: absolute;
+                height: 10vh;
+                width: 50vw;
+            
+                bottom: -17vh;
+                display:flex;
+                justify-content: center;
+                
+    
+                .chargingBar{
+                    position: absolute;
+                    height:2vh;
+                    width: 40vw;
+                    top: -1vh;
+                    background-color:rgba(0, 0, 0, 0.814);
+    
+                    .bar{
+                        height: 100%;
+                        background-color:rgb(243, 243, 243);
+                        position: absolute;
+                        width: 0%;
+                        left: 0%;
+                    }
+                }
+    
+                .buttons__container{
+                    display: flex;
+                    align-items: center;
+                    justify-content:center;
+                    height: 100%;
+                    width: 100%;
+            
+                    .previousSong{
+                        margin: 0 25px;
+                        font-size:1.5rem;
+                        cursor:pointer;
+                        color:rgba(0, 0, 0, 0.814);
+    
+                        &:hover{
+                            color: #000;
+                        }
+                    }
+                    .nextSong{
+                        margin: 0 25px;
+                        font-size:1.5rem;
+                        cursor:pointer;
+                        color:rgba(0, 0, 0, 0.814);
+    
+                        &:hover{
+                            color: #000;
+                        }
+                    }
+                    .play{
+                        margin: 0 5px;
+                        font-size: 2rem;
+                        cursor:pointer;
+                        color:rgba(0, 0, 0, 0.814);
+    
+                        &:hover{
+                            color: #000;
+                        }
+                    }
+    
+                    .pause{
+                        margin: 0 5px;
+                        font-size:2.4rem;
+                        cursor:pointer;
+                        color:rgba(0, 0, 0, 0.814);
+    
+                        &:hover{
+                            color:#000;
+                        }
+                    }
+    
+                    .off{
+                        display: none;
+                    }
+    
+                    .on{
+                        display: block;
+                    }
+                    
+                }
+            }
+        }
+    
+        
+    }   
+}
+
