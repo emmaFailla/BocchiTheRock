@@ -36,7 +36,7 @@
 
 
     .cover__container{
-        min-height: 60vh;
+        min-height: 50vh;
         min-width: 30vw;
         position:relative;
         display: flex;
@@ -44,11 +44,12 @@
         align-items: center;
         background-image: url(Covers/1.jpg);
         background-position: center center;
-        background-size: cover;
-        -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+        background-size: contain;
+        // -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+        // -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+        // box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
         border-radius: 2px;
+        background-repeat:no-repeat;
 
        .albumOff{
                 display: none;
@@ -58,10 +59,10 @@
             }
 
         .albumPlaylist__container{
-            height: 40vh;
+            height: 45vh;
             width: 15vw;
             border: solid #000 4px;
-            right: -20vw;
+            right: -18vw;
             position: absolute;
             align-items: center;
             justify-content:center;
@@ -75,13 +76,16 @@
                 flex-flow: column;
                 justify-content: space-evenly;
                 align-items: center;
-            overflow: hidden;
+                overflow-y:hidden;
+
+                
 
                 .song{
                     list-style: none;
                     border-bottom:solid #000 4px;
                     width: 100%;
                     cursor: pointer;
+                    font-size:.9rem;
                 }
 
 
@@ -298,18 +302,19 @@
     
     
         .cover__container{
-            min-height: 40vh;
-            min-width: 50vw;
+            min-height: 30vh;
+            min-width: 70vw;
             position:relative;
             display: flex;
             justify-content:center;
             align-items: center;
             background-image: url(Covers/1.jpg);
             background-position: center center;
-            background-size: cover;
-            -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            background-size: contain;
+            background-repeat:no-repeat;
+            // -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            // -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            // box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
             border-radius: 2px;
     
 
@@ -345,7 +350,7 @@
             }
             .songName{
                 white-space: nowrap;
-                font-size:1rem;
+                font-size:.9rem;
             }
     
             .options__container{
@@ -360,7 +365,7 @@
                 .chargingBar{
                     position: absolute;
                     height:2vh;
-                    width: 50vw;
+                    width: 60vw;
                     top: -1vh;
                     background-color:rgba(0, 0, 0, 0.814);
     
@@ -398,18 +403,19 @@
     
         .cover__container{
             min-height: 50vh;
-            min-width: 50vw;
+            min-width: 80vw;
             position:relative;
             display: flex;
             justify-content:center;
             align-items: center;
             background-image: url(Covers/1.jpg);
             background-position: center center;
-            background-size: cover;
-            -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            background-size: contain;
+            // -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            // -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            // box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
             border-radius: 2px;
+            background-repeat:no-repeat;
     
 
             .albumPlaylist__container{
@@ -458,7 +464,7 @@
                 .chargingBar{
                     position: absolute;
                     height:2vh;
-                    width: 50vw;
+                    width: 70vw;
                     top: -1vh;
                     background-color:rgba(0, 0, 0, 0.814);
     
@@ -512,11 +518,12 @@
             align-items: center;
             background-image: url(Covers/1.jpg);
             background-position: center center;
-            background-size: cover;
-            -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            background-size: contain;
+            // -webkit-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            // -moz-box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
+            // box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.75);
             border-radius: 2px;
+            background-repeat:no-repeat;
     
            .albumOff{
                     display: none;
@@ -543,13 +550,14 @@
                     flex-flow: column;
                     justify-content: space-evenly;
                     align-items: center;
-                    overflow: scroll;
+                    
     
                     .song{
                         list-style: none;
                         border-bottom:solid #000 4px;
                         width: 100%;
                         cursor: pointer;
+                        font-size:.8rem;
                     }
     
     

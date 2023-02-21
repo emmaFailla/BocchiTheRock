@@ -39,7 +39,7 @@
 }
 
 #main .cover__container {
-  min-height: 60vh;
+  min-height: 50vh;
   min-width: 30vw;
   position: relative;
   display: -webkit-box;
@@ -53,10 +53,9 @@
           align-items: center;
   background-image: url(Covers/1.jpg);
   background-position: center center;
-  background-size: cover;
-  -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+  background-size: contain;
   border-radius: 2px;
+  background-repeat: no-repeat;
 }
 
 #main .cover__container .albumOff {
@@ -70,10 +69,10 @@
 }
 
 #main .cover__container .albumPlaylist__container {
-  height: 40vh;
+  height: 45vh;
   width: 15vw;
   border: solid #000 4px;
-  right: -20vw;
+  right: -18vw;
   position: absolute;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -99,7 +98,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 #main .cover__container .albumPlaylist__container .albumPlaylist .song {
@@ -107,6 +106,7 @@
   border-bottom: solid #000 4px;
   width: 100%;
   cursor: pointer;
+  font-size: .9rem;
 }
 
 #main .cover__container .songName {
@@ -371,8 +371,8 @@
     display: none;
   }
   #main .cover__container {
-    min-height: 40vh;
-    min-width: 50vw;
+    min-height: 30vh;
+    min-width: 70vw;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -385,9 +385,8 @@
             align-items: center;
     background-image: url(Covers/1.jpg);
     background-position: center center;
-    background-size: cover;
-    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 2px;
   }
   #main .cover__container .albumPlaylist__container {
@@ -429,7 +428,7 @@
   }
   #main .cover__container .songName {
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: .9rem;
   }
   #main .cover__container .options__container {
     position: absolute;
@@ -446,7 +445,7 @@
   #main .cover__container .options__container .chargingBar {
     position: absolute;
     height: 2vh;
-    width: 50vw;
+    width: 60vw;
     top: -1vh;
     background-color: rgba(0, 0, 0, 0.814);
   }
@@ -468,7 +467,7 @@
   }
   #main .cover__container {
     min-height: 50vh;
-    min-width: 50vw;
+    min-width: 80vw;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -481,10 +480,9 @@
             align-items: center;
     background-image: url(Covers/1.jpg);
     background-position: center center;
-    background-size: cover;
-    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    background-size: contain;
     border-radius: 2px;
+    background-repeat: no-repeat;
   }
   #main .cover__container .albumPlaylist__container {
     display: none;
@@ -541,7 +539,7 @@
   #main .cover__container .options__container .chargingBar {
     position: absolute;
     height: 2vh;
-    width: 50vw;
+    width: 70vw;
     top: -1vh;
     background-color: rgba(0, 0, 0, 0.814);
   }
@@ -594,10 +592,9 @@
             align-items: center;
     background-image: url(Covers/1.jpg);
     background-position: center center;
-    background-size: cover;
-    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    background-size: contain;
     border-radius: 2px;
+    background-repeat: no-repeat;
   }
   #main .cover__container .albumOff {
     display: none;
@@ -636,13 +633,13 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow: scroll;
   }
   #main .cover__container .albumPlaylist__container .albumPlaylist .song {
     list-style: none;
     border-bottom: solid #000 4px;
     width: 100%;
     cursor: pointer;
+    font-size: .8rem;
   }
   #main .cover__container .songName {
     position: absolute;
